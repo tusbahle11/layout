@@ -1,0 +1,82 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+}
+
+.card{
+    min-height: 300px;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    margin-top: 120px;
+    box-shadow: 10px 10px 5px rgb(80, 79, 79);
+    border-radius: 10px;
+}
+
+.card .card-header{
+    padding: 30px;
+    /* border-bottom: 1px solid gray; */
+}
+
+.card .card-header .card-header-title{
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: left;
+    font-family: Arial;
+}
+.card .card-body{
+    padding-left: 30px;
+    height: 250px;
+}
+
+.card form .form-row{
+    display: table;
+    width: calc(100% - 30px);
+    justify-content: center;
+}
+.card .form-row:not(:first-child){
+    margin-top: 20px;
+}
+
+.card .form-row input{
+    width: 100%;
+    outline: none;
+    padding:5px;
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+
+.card label{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.card input:hover{
+    border-bottom: 2px solid blue;
+    background-color: rgb(233, 233, 244);
+}
+.card input:focus{
+    border-bottom: 2px solid yellow;
+    background-color: rgb(160, 214, 226);
+}
+.card input:invalid{
+    background-color: rgb(248, 194, 194);
+    border-bottom: 2px solid red;
+}
+
+.card .form-row button{
+    text-align: center;
+    width: 200px;
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    height: 40px;
+    margin-left: calc(100% / 3);
+    border: 0;
+}
+
+.card .form-row button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+}

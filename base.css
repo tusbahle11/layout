@@ -1,23 +1,24 @@
-html{
+html {
     margin: 10px;
 }
 
-body{
+body {
     background-color: gray;
     height: 100%;
     width: 100%;
+    padding: 10px;
     margin: 10px;
 }
 
-.wrap{
-    position: static;
-    background-color: lightcoral;
+.wrap {
     width: calc(100% - 10px);
+    background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    min-height: 500px;
 }
 
-.header{
+.header {
     min-height: 150px;
     margin-bottom: 15px;
     border-bottom: 2px dashed gray;
@@ -28,16 +29,97 @@ body{
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 120px, 0 100%); */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 120px, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100%)
-
 }
 
-.header .logo{
+.header .logo {
     max-width: 250px;
     width: 250px;
     height: 100px;
 }
- .header .logo img{
+
+.header .logo img {
     max-width: 250px;
- }
+    transform: rotate(-40deg);
+}
+
+.toggle {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+    background-color: red;
+    margin-top: -100px;
+}
+
+.toggle-line {
+    background-color: #ECF3FF;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+/* Style span tag */
+
+.toggle-line::before,
+.toggle-line::after {
+    background-color: #ECF3FF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+
+.toggle-line::before {
+    top: 5px;
+}
+
+.toggle-line::after {
+    top: -5px;
+}
+
+.side-menu {
+    /* display: none; */
+}
+
+/* Toggle menu icon */
+.side-menu:checked~nav {
+    max-height: 100%;
+}
+
+.side-menu:checked~.toggle .toggle-line {
+    background: transparent;
+}
+
+.side-menu:checked~.toggle .toggle-line::before {
+    transform: rotate(-deg);
+    top: 0;
+}
+
+.side-menu:checked~.toggle .toggle-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+.content {
+    width: calc(100% - 2rem);
+    min-height: 450px;
+    padding: 1rem;
+}
+
+
+
+.footer {
+    background-color: #333;
+    padding: 5rem 0;
+    font-size: 1.1rem;
+    color: #f7f7f7;
+    text-align: center;
+}
